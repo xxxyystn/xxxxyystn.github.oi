@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人介绍 - xxxx吃x</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+        }
+        
+        body {
+            background-image: url('https://example.com/furina-background.jpg'); /* 替换为您的芙玲娜背景图路径 */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f0f8ff; /* 备用背景色 */
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            padding: 30px;
+        }
+        
+        /* 头部样式 */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #add8e6;
+            margin: 0 auto 15px;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+        
+        .username {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        /* 导航按钮样式 */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-btn {
+            background-color: #add8e6; /* 淡蓝色 */
+            color: #2c3e50;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .nav-btn:hover {
+            background-color: #87ceeb;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-btn.active {
+            background-color: #5fa8d3;
+            color: white;
+        }
+        
+        /* 内容区域样式 */
+        .content-section {
+            display: none;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .server-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .donation-image {
+            max-width: 300px;
+            width: 100%;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+        
+        /* 页脚样式 */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="6062e94c6306f6800b73a8ce8d113d5b.jpeg" alt="头像" class="avatar">
+            <h1 class="username">xxxxyystn/xxxx吃x</h1>
+        </div>
+        
+        <div class="nav-buttons">
+            <button class="nav-btn active" data-target="personal">一、腐竹个人</button>
+            <button class="nav-btn" data-target="servers">二、拥有服务器</button>
+            <button class="nav-btn" data-target="donation">三、资助方式</button>
+        </div>
+        
+        <section id="personal" class="content-section active">
+            <h2>腐竹个人</h2>
+            <p>腐竹：10后，2012年5月5日，爱好打fps游戏以及一些有意思的事情。腐竹在2019年第一次接触mc，在2022年正式学习指令，在2025年5月份左右开了人生中第一个服务器…</p>
+        </section>
+        
+        <section id="servers" class="content-section">
+            <h2>拥有服务器</h2>
+            <div class="server-info">
+                <p><strong>生存服战争服</strong>: 23195707</p>
+                <p><strong>山头养老服</strong>: mc.163.com/open/mc_realms/?realms=DC5B22436E0</p>
+                <p><他们>地址请复制</他们></p>
+            </div>
+        </部分>
+        
+        <部分 身份标识="捐赠" 班级="content-section">
+            <H2>资助方式</H2>
+            <p>vx收款</p>
+            <IMG src="mm_retard_qrcode_1763472388876" alt="微信收款码" 班级="捐赠图像">
+        </部分>
+        
+        <div 班级="页脚">
+            <p>©2025 xxxx吃x的个人介绍页面</p>
+        </div>
+    </div>
+
+    <脚本>
+// 标签页切换功能// 标签页切换功能
+document.addEventListener('DOMContentLoaded'，函数(){document.addEventListener('DOMContentLoaded'，函数(){
+常量navButtons=文档。querySelectorAll('.nav-btn')；常量navButtons=document.querySelectorAll('.nav-btn')；
+Const contentSections=文件.querySelectorAll('.content-section')；const contentSections=文件。querySelectorAll('.content-section')；
+            
+导航按钮。foreach(button=>{navButtons.foreach(button=>{
+按钮。addEventListener('click'，函数(){按钮。addEventListener('click'，function(){
+Const TargetID=this.getattribute('data-target')；const TargetID=this.getAttribute('data-target')；
+                    
+// 移除所有按钮的活动状态// 移除所有按钮的活动状态
+navButtons.foreach(btn=>btn.classList.移除('active'))；navButtons。foreach(btn=>btn.classList.remove('active'))；
+// 隐藏所有内容区域// 隐藏所有内容区域
+contentSections。foreach(section=>section.classList.remove('active'))；contentSections。foreach(section=>section.classList.remove('active'))；
+                    
+// 添加当前按钮的活动状态// 添加当前按钮的活动状态
+这。classList。add('active')；this.classList.add('active')；
+// 显示目标内容区域// 显示目标内容区域
+文件。getElementById(targetId).classList.添加('active')；文档。getElementById(targetId).classList.add('active')；
+});
+});
+});
+    </脚本>
+</身体>
+</超文本标记语言>
